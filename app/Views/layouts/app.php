@@ -24,7 +24,7 @@
     <link href="/assets/quill/quill.snow.css" rel="stylesheet">
     <link href="/assets/quill/quill.bubble.css" rel="stylesheet">
     <link href="/assets/remixicon/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/assets/DataTables/datatables.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/DataTables/datatables.css" />
     <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css"> -->
@@ -189,6 +189,13 @@
                 <a class="nav-link collapsed" href="/edit">
                     <i class="bi bi-journal-bookmark-fill"></i>
                     <span>Edit Data</span>
+                </a>
+            </li><!-- End Profile Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/log">
+                    <i class="bi bi-journal-check"></i>
+                    <span>Log Book</span>
                 </a>
             </li><!-- End Profile Page Nav -->
             <?php if (session('role') == 'Admin') : ?>

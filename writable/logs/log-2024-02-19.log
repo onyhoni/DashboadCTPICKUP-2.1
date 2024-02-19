@@ -1,0 +1,859 @@
+ERROR - 2024-02-19 10:51:34 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ci4' in /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php:170
+Stack trace:
+#0 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php(170): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(1361): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(1380): CodeIgniter\Database\BaseConnection->listTables()
+#5 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(918): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(345): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ci4' in /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(1361): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(1380): CodeIgniter\Database\BaseConnection->listTables()
+#4 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#10 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(918): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#11 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#12 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(345): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/Console.php(48): CodeIgniter\CodeIgniter->run()
+#14 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/spark(98): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2024-02-19 11:32:27 --> mysqli_sql_exception: Unknown column 'case.id' in 'on clause' in /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT DISTINCT...', 0)
+#1 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/BaseModel.php(525): CodeIgniter\Model->doFind(false, NULL)
+#6 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Model.php(218): CodeIgniter\BaseModel->find()
+#7 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/BaseModel.php(556): CodeIgniter\Model->doFindColumn('regional')
+#8 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/app/Controllers/HomeController.php(24): CodeIgniter\BaseModel->findColumn('regional')
+#9 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(925): App\Controllers\HomeController->index()
+#10 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#11 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Commands/Server/rewrite.php(47): require_once('/Users/macbooka...')
+#14 {main}
+CRITICAL - 2024-02-19 11:32:27 --> Unknown column 'case.id' in 'on clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('SELECT DISTINCT `regional`
+FROM `tikets`
+JOIN `cases` ON `tikets`.`case_id` = `case`.`id`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT `regional`
+FROM `tikets`
+JOIN `cases` ON `tikets`.`case_id` = `case`.`id`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT `regional`
+FROM `tikets`
+JOIN `cases` ON `tikets`.`case_id` = `case`.`id`')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT `regional`
+FROM `tikets`
+JOIN `cases` ON `tikets`.`case_id` = `case`.`id`', [], false)
+ 5 SYSTEMPATH/Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(525): CodeIgniter\Model->doFind(false, null)
+ 7 SYSTEMPATH/Model.php(218): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH/BaseModel.php(556): CodeIgniter\Model->doFindColumn('regional')
+ 9 APPPATH/Controllers/HomeController.php(24): CodeIgniter\BaseModel->findColumn('regional')
+10 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+11 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+12 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:32:57 --> CodeIgniter\BaseModel::findColumn(): Argument #1 ($columnName) must be of type string, array given, called in /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/app/Controllers/HomeController.php on line 24
+in SYSTEMPATH/BaseModel.php on line 550.
+ 1 APPPATH/Controllers/HomeController.php(24): CodeIgniter\BaseModel->findColumn([...])
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:33:16 --> Only single column allowed in Column name.
+in SYSTEMPATH/BaseModel.php on line 553.
+ 1 SYSTEMPATH/BaseModel.php(553): CodeIgniter\Database\Exceptions\DataException::forFindColumnHaveMultipleColumns()
+ 2 APPPATH/Controllers/HomeController.php(24): CodeIgniter\BaseModel->findColumn('case_id,case')
+ 3 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:33:56 --> Too few arguments to function CodeIgniter\BaseModel::findColumn(), 0 passed in /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/app/Controllers/HomeController.php on line 24 and exactly 1 expected
+in SYSTEMPATH/BaseModel.php on line 550.
+ 1 APPPATH/Controllers/HomeController.php(24): CodeIgniter\BaseModel->findColumn()
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:39:20 --> CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Model.php on line 809
+in SYSTEMPATH/Database/BaseBuilder.php on line 1577.
+ 1 SYSTEMPATH/Model.php(809): CodeIgniter\Database\BaseBuilder->get('case,case_id')
+ 2 APPPATH/Controllers/HomeController.php(24): CodeIgniter\Model->__call('get', [...])
+ 3 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:46:29 --> Call to undefined method App\Models\Tiket::distict
+in SYSTEMPATH/Model.php on line 811.
+ 1 APPPATH/Controllers/HomeController.php(24): CodeIgniter\Model->__call('distict', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:47:06 --> Object of class stdClass could not be converted to string
+in APPPATH/Views/dashboard.php on line 18.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 4 APPPATH/Controllers/HomeController.php(29): view('dashboard', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:47:10 --> Object of class stdClass could not be converted to string
+in APPPATH/Views/dashboard.php on line 18.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 4 APPPATH/Controllers/HomeController.php(29): view('dashboard', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:48:02 --> Array to string conversion
+in APPPATH/Views/dashboard.php on line 18.
+ 1 APPPATH/Views/dashboard.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH/Views/dashboard.php', 18)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH/Controllers/HomeController.php(31): view('dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:50:48 --> Object of class stdClass could not be converted to string
+in APPPATH/Views/dashboard.php on line 18.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 4 APPPATH/Controllers/HomeController.php(31): view('dashboard', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:55:12 --> Cannot use object of type stdClass as array
+in APPPATH/Views/dashboard.php on line 18.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 4 APPPATH/Controllers/HomeController.php(31): view('dashboard', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:55:14 --> Cannot use object of type stdClass as array
+in APPPATH/Views/dashboard.php on line 18.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 4 APPPATH/Controllers/HomeController.php(31): view('dashboard', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:55:24 --> Cannot use object of type stdClass as array
+in APPPATH/Views/dashboard.php on line 18.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 4 APPPATH/Controllers/HomeController.php(31): view('dashboard', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 11:55:42 --> Cannot use object of type stdClass as array
+in APPPATH/Views/dashboard.php on line 18.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 4 APPPATH/Controllers/HomeController.php(31): view('dashboard', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 13:30:12 --> Undefined property: stdClass::$user_id
+in APPPATH/Views/dashboard.php on line 26.
+ 1 APPPATH/Views/dashboard.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$user_id', 'APPPATH/Views/dashboard.php', 26)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH/Controllers/HomeController.php(34): view('dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 13:31:50 --> Undefined property: stdClass::$city_id
+in APPPATH/Views/dashboard.php on line 34.
+ 1 APPPATH/Views/dashboard.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$city_id', 'APPPATH/Views/dashboard.php', 34)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH/Controllers/HomeController.php(34): view('dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 13:31:54 --> Undefined property: stdClass::$city_id
+in APPPATH/Views/dashboard.php on line 34.
+ 1 APPPATH/Views/dashboard.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$city_id', 'APPPATH/Views/dashboard.php', 34)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH/Controllers/HomeController.php(34): view('dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:26:03 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:26:06 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:26:07 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:26:41 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:26:42 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:26:43 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:42:48 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:42:49 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:42:53 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:42:55 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:43:23 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:44:06 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:44:07 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:44:09 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:44:10 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:44:15 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:44:16 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2024-02-19 14:44:20 --> mysqli_sql_exception: Column 'regional' in where clause is ambiguous in /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/app/Controllers/HomeController.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+#6 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#7 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Commands/Server/rewrite.php(47): require_once('/Users/macbooka...')
+#10 {main}
+CRITICAL - 2024-02-19 14:44:20 --> Column 'regional' in where clause is ambiguous
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *
+FROM `tikets`
+JOIN `cases` ON `tikets`.`case_id` = `cases`.`id`
+JOIN `cities` ON `tikets`.`city_id` = `cities`.`id`
+WHERE `regional` = \'JAKARTA\'
+AND `created_at` >= \'2024-02-12\'
+AND `created_at` <= \'2024-02-20\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tikets`
+JOIN `cases` ON `tikets`.`case_id` = `cases`.`id`
+JOIN `cities` ON `tikets`.`city_id` = `cities`.`id`
+WHERE `regional` = \'JAKARTA\'
+AND `created_at` >= \'2024-02-12\'
+AND `created_at` <= \'2024-02-20\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tikets`
+JOIN `cases` ON `tikets`.`case_id` = `cases`.`id`
+JOIN `cities` ON `tikets`.`city_id` = `cities`.`id`
+WHERE `regional` = \'JAKARTA\'
+AND `created_at` >= \'2024-02-12\'
+AND `created_at` <= \'2024-02-20\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tikets`
+JOIN `cases` ON `tikets`.`case_id` = `cases`.`id`
+JOIN `cities` ON `tikets`.`city_id` = `cities`.`id`
+WHERE `regional` = :regional:
+AND `created_at` >= :created_at:
+AND `created_at` <= :created_at.1:', [...], false)
+ 5 APPPATH/Controllers/HomeController.php(76): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:44:21 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:44:22 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:44:23 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:52:02 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:52:06 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 14:52:07 --> Undefined variable $case
+in APPPATH/Controllers/HomeController.php on line 91.
+ 1 APPPATH/Controllers/HomeController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $case', 'APPPATH/Controllers/HomeController.php', 91)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\HomeController->datadashboard()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:07:21 --> Invalid file: LogBook/index.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('LogBook/index.php')
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 3 APPPATH/Controllers/LogBookController.php(11): view('LogBook/index', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:09:01 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(11): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:09:50 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(11): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:10:46 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(11): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:10:47 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(11): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:11:01 --> Undefined variable $title
+in APPPATH/Views/layouts/app.php on line 8.
+ 1 APPPATH/Views/layouts/app.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'APPPATH/Views/layouts/app.php', 8)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/app.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 5 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 6 APPPATH/Controllers/LogBookController.php(11): view('LogBook/index')
+ 7 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:11:21 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(11): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:12:20 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:12:21 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:12:31 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:13:37 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:13:38 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:13:43 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:14:22 --> Undefined variable $cases
+in APPPATH/Views/LogBook/index.php on line 19.
+ 1 APPPATH/Views/LogBook/index.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cases', 'APPPATH/Views/LogBook/index.php', 19)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/LogBook/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:14:31 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:14:38 --> Undefined variable $cases
+in APPPATH/Views/LogBook/index.php on line 19.
+ 1 APPPATH/Views/LogBook/index.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cases', 'APPPATH/Views/LogBook/index.php', 19)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/LogBook/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:14:54 --> Undefined variable $cases
+in APPPATH/Views/LogBook/index.php on line 19.
+ 1 APPPATH/Views/LogBook/index.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cases', 'APPPATH/Views/LogBook/index.php', 19)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/LogBook/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:15:31 --> Undefined variable $tikets
+in APPPATH/Views/LogBook/index.php on line 43.
+ 1 APPPATH/Views/LogBook/index.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tikets', 'APPPATH/Views/LogBook/index.php', 43)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/LogBook/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:15:35 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:15:58 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:49:55 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:49:56 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:49:57 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:49:58 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/layouts/app.php on line 79.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layouts/app', [], true)
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(14): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 15:51:32 --> Class "App\Controllers\Tiket" not found
+in APPPATH/Controllers/LogBookController.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(887): App\Controllers\LogBookController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2024-02-19 16:25:56 --> mysqli_sql_exception: Referencing column 'user_id' and referenced column 'id' in foreign key constraint 'logbooks_user_id_foreign' are incompatible. in /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php(292): mysqli->query('CREATE TABLE `l...', 0)
+#1 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/app/Database/Migrations/2024-02-19-085938_CreateLogbookTable.php(66): CodeIgniter\Database\Forge->createTable('logbooks')
+#5 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MigrationRunner.php(877): App\Database\Migrations\CreateLogbookTable->up()
+#6 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(918): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(345): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+ERROR - 2024-02-19 16:27:51 --> mysqli_sql_exception: Referencing column 'user_id' and referenced column 'id' in foreign key constraint 'logbooks_user_id_foreign' are incompatible. in /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MySQLi/Connection.php(292): mysqli->query('CREATE TABLE `l...', 0)
+#1 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/app/Database/Migrations/2024-02-19-085938_CreateLogbookTable.php(66): CodeIgniter\Database\Forge->createTable('logbooks')
+#5 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MigrationRunner.php(877): App\Database\Migrations\CreateLogbookTable->up()
+#6 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Database/MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(918): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CodeIgniter.php(345): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/system/CLI/Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 /Users/macbookair/Project2023/Codeigniter/DashboadCTPICKUP-2.1/spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+CRITICAL - 2024-02-19 16:32:33 --> Undefined variable $validation
+in APPPATH/Views/LogBook/index.php on line 16.
+ 1 APPPATH/Views/LogBook/index.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH/Views/LogBook/index.php', 16)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/LogBook/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(29): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 16:33:06 --> Undefined variable $cases
+in APPPATH/Views/LogBook/index.php on line 30.
+ 1 APPPATH/Views/LogBook/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cases', 'APPPATH/Views/LogBook/index.php', 30)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/LogBook/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(29): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 16:33:24 --> Undefined variable $tikets
+in APPPATH/Views/LogBook/index.php on line 92.
+ 1 APPPATH/Views/LogBook/index.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tikets', 'APPPATH/Views/LogBook/index.php', 92)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/LogBook/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(29): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 16:33:24 --> Undefined variable $tikets
+in APPPATH/Views/LogBook/index.php on line 92.
+ 1 APPPATH/Views/LogBook/index.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tikets', 'APPPATH/Views/LogBook/index.php', 92)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/LogBook/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/index', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(29): view('LogBook/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')

@@ -18,10 +18,15 @@ class HomeController extends BaseController
 
     public function index()
     {
+        $db      = \Config\Database::connect();
         $Pesan = new Pesan();
+
+
         $data = [
             'title' => 'Dashboard',
-            'cases' => $this->Tiket->distinct()->findColumn('case_id'),
+            'cases' => $this->Tiket->join('cases', 'tikets.case_id = cases.id')->select('case ,case_id')->distinct('case_id', 'case')->get()->getResult(),
+            'users' => $this->Tiket->join('users', 'tikets.user_id = users.id')->select('users.id ,username')->distinct('users.id')->get()->getResult(),
+            'origins' => $this->Tiket->join('cities', 'tikets.city_id = cities.id')->select('city_id ,code_3lc')->distinct('city_id')->get()->getResult(),
             'regionals' => $this->Tiket->distinct()->findColumn('regional'),
             'notif' => $Pesan->notif()
         ];
@@ -31,15 +36,18 @@ class HomeController extends BaseController
 
     public function datadashboard()
     {
+        // var_dump($this->request->getVar());
         $start = $this->request->getVar('startTime');
         $end = $this->request->getVar('endTime');
         $statusDash = $this->request->getVar('statusDash');
         $CaseDash = $this->request->getVar('CaseDash');
         $RegionalDash = $this->request->getVar('RegionalDash');
+        $PicDash  = $this->request->getVar('PicDash');
+        $OriginDash  = $this->request->getVar('originDash');
 
         $builder = $this->db->table('tikets')
             ->select('*')
-            ->join('cases', 'tikets.case_id = cases.id');
+            ->join('cases', 'tikets.case_id = cases.id')->join('cities', 'tikets.city_id = cities.id');
         if ($statusDash !== '') {
             $builder->where('status', $statusDash);
             $builder->where('created_at >= ', $start);
@@ -50,6 +58,14 @@ class HomeController extends BaseController
             $builder->where('created_at <= ', date('Y-m-d', strtotime('+1 days', strtotime($end))));
         } else if ($RegionalDash !== '') {
             $builder->where('regional', $RegionalDash);
+            $builder->where('created_at >= ', $start);
+            $builder->where('created_at <= ', date('Y-m-d', strtotime('+1 days', strtotime($end))));
+        } else if ($PicDash !== '') {
+            $builder->where('user_id', $PicDash);
+            $builder->where('created_at >= ', $start);
+            $builder->where('created_at <= ', date('Y-m-d', strtotime('+1 days', strtotime($end))));
+        } else if ($OriginDash !== '') {
+            $builder->where('code_3lc', $OriginDash);
             $builder->where('created_at >= ', $start);
             $builder->where('created_at <= ', date('Y-m-d', strtotime('+1 days', strtotime($end))));
         } else {

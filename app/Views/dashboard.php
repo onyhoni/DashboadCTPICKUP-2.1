@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <main id="main" class="main">
     <div class="row py-3 bg-white mb-2">
-        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+        <div class="col-lg-2 col-md-3 d-flex align-items-center">
             <select class="form-select" name="status" id="status">
                 <option selected value="">Status</option>
                 <option value="OPEN">Open</option>
@@ -11,15 +11,31 @@
                 <option value="CLOSE">Close</option>
             </select>
         </div>
-        <div class="col-lg-3 col-md-3">
+        <div class="col-lg-2 col-md-3">
             <select class="form-select" name="case" id="case">
                 <option selected value="">Case</option>
                 <?php foreach ($cases as $case) : ?>
-                    <option value="<?= $case ?>"><?= $case ?></option>
+                    <option value="<?= $case->case_id ?>"><?= $case->case ?></option>
                 <?php endforeach; ?>
             </select>
         </div>
-        <div class="col-lg-3 col-md-3">
+        <div class="col-lg-2 col-md-3 d-flex align-items-center">
+            <select class="form-select" name="pic" id="pic">
+                <option selected value="">PIC</option>
+                <?php foreach ($users as $user) : ?>
+                    <option value="<?= $user->id ?>"><?= $user->username ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="col-lg-1 col-md-3 d-flex align-items-center">
+            <select class="form-select" name="origin" id="origin">
+                <option selected value="">Branch</option>
+                <?php foreach ($origins as $origin) : ?>
+                    <option value="<?= $origin->code_3lc ?>"><?= $origin->code_3lc ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="col-lg-2 col-md-3">
             <select class="form-select" name="regional" id="regional">
                 <option selected value="">Regional</option>
                 <?php foreach ($regionals as $regioanal) : ?>

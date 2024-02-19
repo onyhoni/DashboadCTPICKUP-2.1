@@ -83,6 +83,9 @@ $routes->post('/update', 'EditController::update');
 
 $routes->post('/pesan', 'PesanController::store');
 
+$routes->resource('/log', ['controller' => 'LogBookController', 'filter' => 'adminGuard']);
+
+
 $routes->resource('/user', ['controller' => 'UserController', 'filter' => 'adminGuard']);
 $routes->resource('/zip', ['controller' => 'ZipController']);
 

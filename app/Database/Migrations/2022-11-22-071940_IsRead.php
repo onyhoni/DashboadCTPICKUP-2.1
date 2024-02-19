@@ -20,6 +20,10 @@ class IsRead extends Migration
                 'constraint'     => 11,
                 'unsigned'       => true,
             ],
+            'user_id' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
             'read' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 10,
