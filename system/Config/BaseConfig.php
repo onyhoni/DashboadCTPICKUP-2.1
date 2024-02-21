@@ -33,7 +33,7 @@ class BaseConfig
      * An optional array of classes that will act as Registrars
      * for rapidly setting config class properties.
      *
-     * @var array
+     * @var arrayF
      */
     public static $registrars = [];
 
@@ -63,9 +63,9 @@ class BaseConfig
 
         $this->registerProperties();
 
-        $properties  = array_keys(get_object_vars($this));
-        $prefix      = static::class;
-        $slashAt     = strrpos($prefix, '\\');
+        $properties = array_keys(get_object_vars($this));
+        $prefix = static::class;
+        $slashAt = strrpos($prefix, '\\');
         $shortPrefix = strtolower(substr($prefix, $slashAt === false ? 0 : $slashAt + 1));
 
         foreach ($properties as $property) {
@@ -111,9 +111,9 @@ class BaseConfig
             $value = trim($value, '\'"');
 
             if (is_int($property)) {
-                $value = (int) $value;
+                $value = (int)$value;
             } elseif (is_float($property)) {
-                $value = (float) $value;
+                $value = (float)$value;
             }
 
             $property = $value;
@@ -127,7 +127,7 @@ class BaseConfig
      */
     protected function getEnvValue(string $property, string $prefix, string $shortPrefix)
     {
-        $shortPrefix        = ltrim($shortPrefix, '\\');
+        $shortPrefix = ltrim($shortPrefix, '\\');
         $underscoreProperty = str_replace('.', '_', $property);
 
         switch (true) {
@@ -173,16 +173,16 @@ class BaseConfig
      */
     protected function registerProperties()
     {
-        if (! static::$moduleConfig->shouldDiscover('registrars')) {
+        if (!static::$moduleConfig->shouldDiscover('registrars')) {
             return;
         }
 
-        if (! static::$didDiscovery) {
-            $locator         = Services::locator();
+        if (!static::$didDiscovery) {
+            $locator = Services::locator();
             $registrarsFiles = $locator->search('Config/Registrar.php');
 
             foreach ($registrarsFiles as $file) {
-                $className            = $locator->getClassname($file);
+                $className = $locator->getClassname($file);
                 static::$registrars[] = new $className();
             }
 
@@ -194,13 +194,13 @@ class BaseConfig
         // Check the registrar class for a method named after this class' shortName
         foreach (static::$registrars as $callable) {
             // ignore non-applicable registrars
-            if (! method_exists($callable, $shortName)) {
+            if (!method_exists($callable, $shortName)) {
                 continue; // @codeCoverageIgnore
             }
 
             $properties = $callable::$shortName();
 
-            if (! is_array($properties)) {
+            if (!is_array($properties)) {
                 throw new RuntimeException('Registrars must return an array of properties and their values.');
             }
 

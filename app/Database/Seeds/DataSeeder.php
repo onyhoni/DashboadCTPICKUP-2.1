@@ -13,5 +13,12 @@ class DataSeeder extends Seeder
         $this->call('CaseSeeder');
         $this->call('ZipSeeder');
         $this->call('TiketSeeder');
+        $this->call('LogBookSeeder');
+        $this->call('CategoriySeeder');
+        $this->call('IssueSeeder');
+        $this->call('SubTypeSeeder');
+        $this->call('ImpactSeeder');
+        $this->call('DescriptionSeeder');
+
     }
 }

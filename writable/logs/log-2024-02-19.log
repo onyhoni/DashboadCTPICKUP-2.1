@@ -857,3 +857,15 @@ in APPPATH/Views/LogBook/index.php on line 92.
  8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2024-02-19 21:07:39 --> Undefined variable $validation
+in APPPATH/Views/LogBook/new.php on line 25.
+ 1 APPPATH/Views/LogBook/new.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH/Views/LogBook/new.php', 25)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/LogBook/new.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('LogBook/new', [], true)
+ 5 APPPATH/Controllers/LogBookController.php(38): view('LogBook/new', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\LogBookController->new()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LogBookController))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')

@@ -30,7 +30,8 @@
                 </select>
             </div>
             <div class="col-lg-2 col-md-4">
-                <input class="form-control" type="date" name="startTime" id="startTime" value="<?= date('Y-m-d', strtotime('-1 days')) ?>">
+                <input class="form-control" type="date" name="startTime" id="startTime"
+                       value="<?= date('Y-m-d', strtotime('-1 days')) ?>">
 
             </div>
             <div class="col-lg-2 col-md-4">
@@ -51,27 +52,61 @@
     <div class="card">
         <div class="card-body table-responsive">
             <h3 class="card-title">Logbook | Control Tower</h3>
-            <table class="table table-borderless" id="example">
+            <div class="mb-4"><a href="/log/new" class="btn btn-secondary btn-sm mb">Create</a></div>
+            <table class="table table-borderless align-middle" id="example">
                 <thead>
-                    <tr class="nowrap">
-                        <th scope="col">
-                            <input class="form-check-input" type="checkbox" value="" id="check-all" name="check-all">
-                        </th>
-                        <th scope="col">No</th>
-                        <th scope="col">code</th>
-                        <th scope="col">Awb</th>
-                        <th scope="col">Seller Name</th>
-                        <th scope="col">Origin</th>
-                        <th scope="col">Regional</th>
-                        <th scope="col">Case</th>
-                        <th scope="col">Desc Case</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Created Time</th>
-                        <th scope="col">Urgency</th>
-                        <th scope="col">Close Time</th>
-                    </tr>
+                <tr class="text-nowrap">
+                    <th scope="col">No</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Origin</th>
+                    <th scope="col">Regional</th>
+                    <th scope="col">Priority</th>
+                    <th scope="col">Created</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Issue</th>
+                    <th scope="col">Sub Type</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Escalation</th>
+                    <th scope="col">Impact</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Date Resolution</th>
+                    <th scope="col">Final Resolution</th>
+                    <th scope="col">Evidence</th>
+                    <th scope="col">Pic Created</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                <?php $i = 1; ?>
+                <?php foreach ($logs as $log) : ?>
+                    <tr class="text-nowrap">
+                        <td scope="col"><?= $i++ ?></td>
+                        <td scope="col"><?= $log->account_id ?></td>
+                        <td scope="col"><?= $log->code_3lc ?></td>
+                        <td scope="col"><?= $log->regional ?></td>
+                        <td scope="col"><?= $log->priority ?></td>
+                        <td scope="col"><?= $log->created_at ?></td>
+                        <td scope="col"><?= $log->category ?></td>
+                        <td scope="col"><?= $log->issue ?></td>
+                        <td scope="col"><?= $log->sub_type ?></td>
+                        <td scope="col"><?= $log->description ?></td>
+                        <td scope="col"><?= $log->escalation ?></td>
+                        <td scope="col"><?= $log->impact ?></td>
+                        <td scope="col"><?= $log->action ?></td>
+                        <td scope="col"><?= $log->task ?></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"><?= $log->username ?></td>
+                        <td scope="col"><?= $log->status ?></td>
+                        <td scope="col">
+                            <div><a href="/log/1/edit" class="btn btn-primary">Edit</a></div>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
             </table>
             <!-- End Tables without borders -->
         </div>
@@ -80,42 +115,5 @@
 
 </main><!-- End #main -->
 
-<?php if (session()->getFlashdata('report')) : ?>
-    <div class="modal" id="modal-report" role="dialog">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Report Import</h5>
-                </div>
-                <div class="modal-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                            <thead>
-                                <tr class="text-center">
-                                    <th>No Tiket</th>
-                                    <th>Pesan</th>
-                                    <th>Status</th>
-                                    <th>Reason</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php if (session()->getFlashdata('report')) : ?>
-                                    <?php foreach (session()->getFlashdata('report') as $report) : ?>
-                                        <tr class="text-center">
-                                            <td><?= $report['tiket_id'] ?></td>
-                                            <td><?= $report['pesan'] ?></td>
-                                            <td><?= $report['status'] ?></td>
-                                            <td><?= $report['reason'] ?></td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                <?php endif; ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php endif; ?>
 
 <?= $this->endSection(); ?>

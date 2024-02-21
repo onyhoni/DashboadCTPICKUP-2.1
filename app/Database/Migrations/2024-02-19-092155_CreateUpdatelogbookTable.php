@@ -10,34 +10,34 @@ class CreateUpdatelogbookTable extends Migration
     {
         $this->forge->addField([
             'id' => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'final_description' => [
-                'type'       => 'TEXT',
+            'resolution' => [
+                'type' => 'TEXT',
                 'null' => true,
             ],
             'evidance' => [
-                'type'       => 'TEXT',
+                'type' => 'TEXT',
                 'null' => true,
             ],
             'user_id' => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true,
             ],
             'logbook_id' => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true,
             ],
             'created_at' => [
-                'type'           => 'datetime',
+                'type' => 'datetime',
             ],
             'updated_at' => [
-                'type'           => 'datetime',
+                'type' => 'datetime',
             ],
         ]);
         $this->forge->addKey('id', true);
