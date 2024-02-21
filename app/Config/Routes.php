@@ -83,6 +83,8 @@ $routes->post('/update', 'EditController::update');
 
 $routes->post('/pesan', 'PesanController::store');
 
+$routes->get('log/getSubType', 'LogBookController::getSubType');
+$routes->get('log/getDesc', 'LogBookController::getDesc');
 $routes->resource('/log', ['controller' => 'LogBookController', 'filter' => 'adminGuard']);
 
 

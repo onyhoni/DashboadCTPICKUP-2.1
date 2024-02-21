@@ -45,7 +45,10 @@ class LogBookController extends BaseController
         $data = [
             'title' => 'Log Book',
             'notif' => $this->Pesan->notif(),
-            'validation' => \config\Services::validation()
+            'validation' => \config\Services::validation(),
+            'categories' => $this->db->table('categories')->get()->getResult(),
+            'issues' => $this->db->table('issues')->get()->getResult()
+
         ];
         return view('LogBook/create', $data);
     }
@@ -101,5 +104,23 @@ class LogBookController extends BaseController
             'log' => $this->LogBook->where('id', $id)->get()->getRow()
         ];
         return view('LogBook/edit', $data);
+    }
+
+
+    public function getSubType()
+    {
+        $id = $this->request->getVar('id');
+        return json_encode($this->db->table('sub_types')->where('issue_id', $id)->get()->getResult());
+
+    }
+
+    public function getDesc()
+    {
+        $id = $this->request->getVar('id');
+        return json_encode($this->db->table('descriptions')
+            ->join('impacts', 'descriptions.impact_id = impacts.id')
+            ->select('descriptions.id,descriptions.name,impact_id,impacts.name as impact_name')
+            ->where('sub_type_id', $id)->get()->getResult());
+
     }
 }

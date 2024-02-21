@@ -71,18 +71,6 @@
                                         <?= ($validation->hasError('priority')) ? $validation->getError('account') : '' ?>
                                     </div>
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="issue" class="form-label">Issue</label>
-                                    <textarea type="text" rows="5"
-                                              class="form-control <?= ($validation->hasError('issue')) ? 'is-invalid' : '' ?>"
-                                              id="issue" name="issue" value="<?= old('issue') ?>"></textarea>
-                                    <div class="invalid-feedback">
-                                        <?= ($validation->hasError('issue')) ? $validation->getError('issue') : '' ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="escalation" class="form-label">Escalation</label>
                                     <select class="form-control" name="escalation" id="escalation">
@@ -94,22 +82,50 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="impact" class="form-label">Impact</label>
-                                    <textarea type="text" rows="5"
-                                              class="form-control <?= ($validation->hasError('impact')) ? 'is-invalid' : '' ?>"
-                                              id="impact" name="impact" value="<?= old('impact') ?>"></textarea>
+                                    <label for="escalation" class="form-label">Action</label>
+                                    <textarea class="form-control" rows="5" name="" id=""></textarea>
                                     <div class="invalid-feedback">
-                                        <?= ($validation->hasError('impact')) ? $validation->getError('impact') : '' ?>
+                                        <?= ($validation->hasError('escalation')) ? $validation->getError('escalation') : '' ?>
                                     </div>
                                 </div>
+                            </div>
+
+                            <!--rigth side-->
+
+                            <div class="col-lg-6">
                                 <div class="mb-3">
-                                    <label for="action" class="form-label">Action</label>
-                                    <textarea type="text" rows="5"
-                                              class="form-control <?= ($validation->hasError('action')) ? 'is-invalid' : '' ?>"
-                                              id="action" name="action" value="<?= old('action') ?>"></textarea>
-                                    <div class="invalid-feedback">
-                                        <?= ($validation->hasError('action')) ? $validation->getError('impact') : '' ?>
-                                    </div>
+                                    <label for="escalation" class="form-label">Category</label>
+                                    <select class="form-control" name="category" id="category">
+                                        <?php foreach ($categories as $category) : ?>
+                                            <option value=<?= $category->id ?>><?= $category->name ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="issue" class="form-label">Issue</label>
+                                    <select class="form-control" name="issue" id="issue">
+                                        <?php foreach ($issues as $issue) : ?>
+                                            <option value="<?= $issue->id ?>"><?= $issue->name ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="sub_type" class="form-label">Sub Type</label>
+                                    <select class="form-control" name="sub_type" id="sub_type">
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Description</label>
+                                    <select class="form-control" name="description" id="description">
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="impact" class="form-label">Impact</label>
+                                    <select class="form-control" name="impact" id="impact">
+                                    </select>
                                 </div>
 
                                 <div class="d-flex justify-content-end">
@@ -128,5 +144,6 @@
 
 </main><!-- End #main -->
 <?= $this->endSection('content'); ?>
+
 
 
