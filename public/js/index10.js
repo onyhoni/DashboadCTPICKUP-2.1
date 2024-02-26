@@ -32,7 +32,7 @@ $(document).ready(function () {
                 $.ajax({
                     url: 'http://localhost:8080/tiket/take',
                     method: 'POST',
-                    data: { id: id },
+                    data: {id: id},
                     success: function () {
                         alert(' Ticket Berhasil Diambil');
                         window.location.href = '';
@@ -63,7 +63,7 @@ $(document).ready(function () {
             $.ajax({
                 url: 'http://localhost:8080/tiket/close',
                 method: 'POST',
-                data: { id: id, pesan: pesan },
+                data: {id: id, pesan: pesan},
                 success: function () {
                     alert(' Ticket Berhasil Ditutup');
                     window.location.href = '';
@@ -90,7 +90,7 @@ $(document).ready(function () {
                 $.ajax({
                     url: 'http://localhost:8080/tiket/delete',
                     method: 'POST',
-                    data: { id: id },
+                    data: {id: id},
                     success: function () {
                         alert(' Ticket Berhasil dihapus');
                         window.location.href = '';
@@ -110,7 +110,7 @@ $(document).ready(function () {
             url: 'http://localhost:8080/dataedit',
             type: 'post',
             dataType: 'json',
-            data: { id: value },
+            data: {id: value},
             success: function (data) {
                 console.log(data);
                 $('#noTicket').val(data.tiket_id);
@@ -150,7 +150,7 @@ $(document).ready(function () {
 
         $.ajax({
             url: 'http://localhost:8080/isread/store',
-            data: { id: id, tiket: tiket },
+            data: {id: id, tiket: tiket},
             success: function () {
                 window.location.href = 'http://localhost:8080/tiket/' + tiket;
             },
@@ -196,15 +196,15 @@ $(document).ready(function () {
                     options +=
                         data[i].id == oldSubType
                             ? '<option selected value="' +
-                              data[i].id +
-                              '">' +
-                              data[i].name +
-                              '</option>'
+                            data[i].id +
+                            '">' +
+                            data[i].name +
+                            '</option>'
                             : '<option value="' +
-                              data[i].id +
-                              '">' +
-                              data[i].name +
-                              '</option>';
+                            data[i].id +
+                            '">' +
+                            data[i].name +
+                            '</option>';
                 }
                 $('#sub_type').html(options);
             },
@@ -230,15 +230,15 @@ $(document).ready(function () {
                     options +=
                         data[i].id == oldDescription
                             ? '<option selected value="' +
-                              data[i].id +
-                              '">' +
-                              data[i].name +
-                              '</option>'
+                            data[i].id +
+                            '">' +
+                            data[i].name +
+                            '</option>'
                             : '<option value="' +
-                              data[i].id +
-                              '">' +
-                              data[i].name +
-                              '</option>';
+                            data[i].id +
+                            '">' +
+                            data[i].name +
+                            '</option>';
                 }
                 $('#description').html(options);
             },
@@ -280,4 +280,56 @@ $(document).ready(function () {
     $('#sub_type').on('change', () => dropDownDescription());
 
     $('#description').on('change', () => dropDownImpact());
+
+
+//     Edit Show Cateory
+
+    $('.category-edit').on('click', function () {
+        const id = $(this).data('id')
+        const table = $(this).data('table')
+        $('#modal-title').html(table)
+        $.ajax({
+            url: '/showlog/editCategory',
+            type: 'post',
+            dataType: 'json',
+            data: {id, table},
+            success: function (data) {
+                $('#table-name').val(table)
+                $('#category').val(data.name)
+                $('#id-category').val(data.id)
+            },
+        });
+    })
+
+    $('.sub-type-edit').on('click', function () {
+        const id = $(this).data('id')
+        $.ajax({
+            url: '/showlog/editSubType',
+            type: 'post',
+            dataType: 'json',
+            data: {id},
+            success: function (data) {
+                $('#id_sub_type').val(data.id)
+                $('#sub_type_name').val(data.name)
+                $('#issue-edit').val(data.issue_id)
+            },
+        });
+    })
+
+    $('.description-edit').on('click', function () {
+        const id = $(this).data('id')
+        $.ajax({
+            url: '/showlog/editDescription',
+            type: 'post',
+            dataType: 'json',
+            data: {id},
+            success: function (data) {
+                $('#description_name').val(data.name)
+                $('#sub_type_id').val(data.sub_type_id)
+                $('#impact_id').val(data.impact_id)
+                $('#id_description').val(data.id)
+            },
+        });
+    })
+
 });

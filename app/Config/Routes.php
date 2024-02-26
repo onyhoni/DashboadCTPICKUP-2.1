@@ -100,6 +100,15 @@ $routes->post('create/subType', 'CreateController::subType', ['filter' => 'admin
 $routes->post('create/description', 'CreateController::description', ['filter' => 'adminGuard']);
 $routes->post('create/impact', 'CreateController::impact', ['filter' => 'adminGuard']);
 
+$routes->get('showlog', 'ShowlogbookController::index', ['filter' => 'adminGuard']);
+$routes->post('showlog/editCategory', 'ShowlogbookController::editCategory', ['filter' => 'adminGuard']);
+$routes->put('showlog/updateCategory', 'ShowlogbookController::updateCategory', ['filter' => 'adminGuard']);
+
+$routes->post('showlog/editSubType', 'ShowlogbookController::editSubType', ['filter' => 'adminGuard']);
+$routes->put('showlog/updateSubType', 'ShowlogbookController::updateSubType', ['filter' => 'adminGuard']);
+
+$routes->post('showlog/editDescription', 'ShowlogbookController::editDescription', ['filter' => 'adminGuard']);
+$routes->put('showlog/updateDescription', 'ShowlogbookController::updateDescription', ['filter' => 'adminGuard']);
 
 $routes->resource('/user', ['controller' => 'UserController', 'filter' => 'adminGuard']);
 $routes->resource('/zip', ['controller' => 'ZipController']);
