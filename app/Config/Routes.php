@@ -3,6 +3,9 @@
 namespace Config;
 
 // Create a new instance of our RouteCollection class.
+use App\Controllers\CategoryController;
+use App\Controllers\CreateController;
+
 $routes = Services::routes();
 
 // Load the system's routing file first, so that the app and ENVIRONMENT
@@ -85,7 +88,17 @@ $routes->post('/pesan', 'PesanController::store');
 
 $routes->get('log/getSubType', 'LogBookController::getSubType');
 $routes->get('log/getDesc', 'LogBookController::getDesc');
-$routes->resource('/log', ['controller' => 'LogBookController', 'filter' => 'adminGuard']);
+$routes->get('log/getImpact', 'LogBookController::getImpact');
+$routes->post('log/updatelog', 'LogBookController::updatelog');
+$routes->post('log/close', 'LogBookController::close');
+$routes->resource('/log', ['controller' => 'LogBookController']);
+
+$routes->get('create', 'CreateController::create', ['filter' => 'adminGuard']);
+$routes->post('create/category', 'CreateController::category', ['filter' => 'adminGuard']);
+$routes->post('create/issue', 'CreateController::issue', ['filter' => 'adminGuard']);
+$routes->post('create/subType', 'CreateController::subType', ['filter' => 'adminGuard']);
+$routes->post('create/description', 'CreateController::description', ['filter' => 'adminGuard']);
+$routes->post('create/impact', 'CreateController::impact', ['filter' => 'adminGuard']);
 
 
 $routes->resource('/user', ['controller' => 'UserController', 'filter' => 'adminGuard']);

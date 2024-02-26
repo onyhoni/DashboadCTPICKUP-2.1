@@ -114,11 +114,14 @@
 
                                 <?php if (in_array($pesan['foto'], scandir('img'))) : ?>
                                     <div class="col-md-8 text-end">
-                                        <a target="_blank" href="/img/<?= $pesan['foto'] ?>"><img src="/img/<?= $pesan['foto'] ?>" alt="" class="img-fluid mt-3"></a>
+                                        <a target="_blank" href="/img/<?= $pesan['foto'] ?>"><img
+                                                    src="/img/<?= $pesan['foto'] ?>" alt="" class="img-fluid mt-3"></a>
                                     </div>
                                 <?php else : ?>
                                     <div class="col-md-8 text-end">
-                                        <a target="_blank" href="<?= $pesan['foto'] ?>"><img src="<?= $pesan['foto'] ?>" alt="" class="img-fluid mt-3"></a>
+                                        <a target="_blank" href="<?= $pesan['foto'] ?>"><img src="<?= $pesan['foto'] ?>"
+                                                                                             alt=""
+                                                                                             class="img-fluid mt-3"></a>
                                     </div>
                                 <?php endif; ?>
                             </div>
@@ -131,11 +134,14 @@
 
                                 <?php if (in_array($pesan['foto'], scandir('img'))) : ?>
                                     <div class="col-md-8 text-end">
-                                        <a target="_blank" href="/img/<?= $pesan['foto'] ?>"><img src="/img/<?= $pesan['foto'] ?>" alt="" class="img-fluid mt-3"></a>
+                                        <a target="_blank" href="/img/<?= $pesan['foto'] ?>"><img
+                                                    src="/img/<?= $pesan['foto'] ?>" alt="" class="img-fluid mt-3"></a>
                                     </div>
                                 <?php else : ?>
                                     <div class="col-md-8 text-end">
-                                        <a target="_blank" href="<?= $pesan['foto'] ?>"><img src="<?= $pesan['foto'] ?>" alt="" class="img-fluid mt-3"></a>
+                                        <a target="_blank" href="<?= $pesan['foto'] ?>"><img src="<?= $pesan['foto'] ?>"
+                                                                                             alt=""
+                                                                                             class="img-fluid mt-3"></a>
                                     </div>
                                 <?php endif; ?>
                             </div>
@@ -159,12 +165,15 @@
                             <?= csrf_field() ?>
                             <input type="hidden" name="tiket_id" value="<?= $tiket['tiket_id'] ?>">
 
-                            <textarea class="form-control <?= ($validation->hasError('pesan')) ? 'is-invalid' : '' ?> " placeholder="Comment here" style="height: 150px" name="pesan"></textarea>
+                            <textarea class="form-control <?= ($validation->hasError('pesan')) ? 'is-invalid' : '' ?> "
+                                      placeholder="Comment here" style="height: 150px" name="pesan"></textarea>
                             <div class="invalid-feedback">
                                 <?= $validation->getError('pesan'); ?>
                             </div>
                             <img class="img-preview img-fluid col-sm-8 my-2">
-                            <input type="file" class="form-control <?= ($validation->hasError('pesan-file')) ? 'is-invalid' : '' ?>" id="pesan-file" name="pesan-file" onchange="previewImage()">
+                            <input type="file"
+                                   class="form-control <?= ($validation->hasError('pesan-file')) ? 'is-invalid' : '' ?>"
+                                   id="pesan-file" name="pesan-file" onchange="previewImage()">
                             <div class="invalid-feedback">
                                 <?= $validation->getError('pesan-file'); ?>
                             </div>
@@ -175,8 +184,6 @@
                         </form>
                     </div>
                 <?php endif; ?>
-
-
 
             </div><!-- End Right side columns -->
         </div>

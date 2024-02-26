@@ -1,6 +1,8 @@
 <?= $this->extend('layouts/app'); ?>
 
 <?= $this->section('content'); ?>
+
+?>
 <main id="main" class="main">
     <?php if (session()->getFlashdata('success')) : ?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -8,7 +10,6 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     <?php endif; ?>
-
 
     <div class="row">
         <div class="">
@@ -22,9 +23,7 @@
                             <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="task" class="form-label">Task Ref / Awb</label>
-                                    <input type="text"
-                                           class="form-control <?= ($validation->hasError('task')) ? 'is-invalid' : '' ?>"
-                                           id="task" name="task" value="<?= old('task') ?>">
+                                    <input type="text" class="form-control <?= ($validation->hasError('task')) ? 'is-invalid' : '' ?>" id="task" name="task" value="<?= old('task') ?>">
                                     <div class="invalid-feedback">
                                         <?= ($validation->hasError('task')) ? $validation->getError('task') : '' ?>
                                     </div>
@@ -32,18 +31,14 @@
                                 <div class="mb-3 row">
                                     <div class="col-md-6">
                                         <label for="code_3lc" class="form-label">Origin</label>
-                                        <input type="text"
-                                               class="form-control <?= ($validation->hasError('code_3lc')) ? 'is-invalid' : '' ?>"
-                                               id="code_3lc" name="code_3lc" value="<?= old('code_3lc') ?>">
+                                        <input type="text" class="form-control <?= ($validation->hasError('code_3lc')) ? 'is-invalid' : '' ?>" id="code_3lc" name="code_3lc" value="<?= old('code_3lc') ?>">
                                         <div class="invalid-feedback">
                                             <?= ($validation->hasError('code_3lc')) ? $validation->getError('code_3lc') : '' ?>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="account" class="form-label">Account</label>
-                                        <input type="text"
-                                               class="form-control <?= ($validation->hasError('account')) ? 'is-invalid' : '' ?>"
-                                               id="account" name="account" value="<?= old('account') ?>">
+                                        <input type="text" class="form-control <?= ($validation->hasError('account')) ? 'is-invalid' : '' ?>" id="account" name="account" value="<?= old('account') ?>">
                                         <div class="invalid-feedback">
                                             <?= ($validation->hasError('account')) ? $validation->getError('account') : '' ?>
                                         </div>
@@ -83,9 +78,9 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="escalation" class="form-label">Action</label>
-                                    <textarea class="form-control" rows="5" name="" id=""></textarea>
+                                    <textarea class="form-control <?= ($validation->hasError('action')) ? 'is-invalid' : '' ?>" rows="5" name="action" id="action"></textarea>
                                     <div class="invalid-feedback">
-                                        <?= ($validation->hasError('escalation')) ? $validation->getError('escalation') : '' ?>
+                                        <?= ($validation->hasError('action')) ? $validation->getError('action') : '' ?>
                                     </div>
                                 </div>
                             </div>
@@ -113,19 +108,28 @@
 
                                 <div class="mb-3">
                                     <label for="sub_type" class="form-label">Sub Type</label>
-                                    <select class="form-control" name="sub_type" id="sub_type">
+                                    <select class="form-control  <?= ($validation->hasError('sub_type')) ? 'is-invalid' : '' ?>" name="sub_type" id="sub_type">
                                     </select>
+                                    <div class="invalid-feedback">
+                                        <?= ($validation->hasError('sub_type')) ? $validation->getError('sub_type') : '' ?>
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="description" class="form-label">Description</label>
-                                    <select class="form-control" name="description" id="description">
+                                    <select class="form-control  <?= ($validation->hasError('description')) ? 'is-invalid' : '' ?>" name="description" id="description">
                                     </select>
+                                    <div class="invalid-feedback">
+                                        <?= ($validation->hasError('description')) ? $validation->getError('description') : '' ?>
+                                    </div>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="impact" class="form-label">Impact</label>
-                                    <select class="form-control" name="impact" id="impact">
+                                    <select class="form-control  <?= ($validation->hasError('impact')) ? 'is-invalid' : '' ?>" name="impact" id="impact">
                                     </select>
+                                    <div class="invalid-feedback">
+                                        <?= ($validation->hasError('impact')) ? $validation->getError('impact') : '' ?>
+                                    </div>
                                 </div>
 
                                 <div class="d-flex justify-content-end">
@@ -144,6 +148,3 @@
 
 </main><!-- End #main -->
 <?= $this->endSection('content'); ?>
-
-
-

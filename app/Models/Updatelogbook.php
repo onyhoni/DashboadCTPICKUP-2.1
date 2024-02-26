@@ -14,7 +14,7 @@ class Updatelogbook extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['resolution', 'evidance', 'user_id', 'logbook_id', 'created_at', 'updated_at'];
 
     // Dates
     protected $useTimestamps = false;

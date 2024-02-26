@@ -47,8 +47,8 @@
                             <div class="mb-3">
                                 <label for="payment" class="form-label">Payment</label>
                                 <select type="text" class="form-select <?= ($validation->hasError('payment')) ?  'is-invalid' : ''  ?>" id="payment" name="payment" value="<?= old('payment') ?>">
-                                    <option <?= $account['payment_metode'] == 'COD' ? 'selected':'' ?> value="COD">COD</option>
-                                    <option <?= $account['payment_metode'] == 'NON COD' ? 'selected':'' ?> value="NON COD">NON COD</option>
+                                    <option <?= $account['payment_metode'] == 'COD' ? 'selected' : '' ?> value="COD">COD</option>
+                                    <option <?= $account['payment_metode'] == 'NON COD' ? 'selected' : '' ?> value="NON COD">NON COD</option>
                                 </select>
 
                                 <div class="invalid-feedback">

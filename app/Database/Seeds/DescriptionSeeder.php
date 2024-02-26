@@ -15,7 +15,7 @@ class DescriptionSeeder extends Seeder
                 'name' => 'Petugas tidak datang'
             ],
             [
-                'sub_type_id' => 2,
+                'sub_type_id' => 1,
                 'impact_id' => 1,
                 'name' => 'Petugas pickup overload/lebih muatan'
             ],
@@ -42,6 +42,11 @@ class DescriptionSeeder extends Seeder
             [
                 'sub_type_id' => 4,
                 'impact_id' => 3,
+                'name' => 'Entry alamat tujuan tidak sesuai'
+            ],
+            [
+                'sub_type_id' => 4,
+                'impact_id' => 4,
                 'name' => 'Input di system tidak sesuai intruksi'
             ],
             [
