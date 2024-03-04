@@ -26,7 +26,7 @@ class HomeController extends BaseController
             'title' => 'Dashboard',
             'cases' => $this->Tiket->join('cases', 'tikets.case_id = cases.id')->select('case ,case_id')->distinct('case_id', 'case')->get()->getResult(),
             'users' => $this->Tiket->join('users', 'tikets.user_id = users.id')->select('users.id ,username')->distinct('users.id')->get()->getResult(),
-            'origins' => $this->Tiket->join('cities', 'tikets.city_id = cities.id')->select('city_id ,code_3lc')->distinct('city_id')->get()->getResult(),
+            'origins' => $this->Tiket->join('cities', 'tikets.city_id = cities.id')->select('code_3lc')->distinct('code_3lc')->get()->getResult(),
             'regionals' => $this->Tiket->distinct()->findColumn('regional'),
             'notif' => $Pesan->notif()
         ];

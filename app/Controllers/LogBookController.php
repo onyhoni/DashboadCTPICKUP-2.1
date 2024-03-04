@@ -250,14 +250,14 @@ class LogBookController extends BaseController
     {
         if (!$this->validate([
             'resolution' => 'required',
-            'evidance' => 'max_size[evidance,2048]|is_image[evidance]|mime_in[evidance,image/jpg,image/png,image/jpeg]'
+            'evidence' => 'max_size[evidence,2048]|is_image[evidence]|mime_in[evidence,image/jpg,image/png,image/jpeg]'
         ])) {
             return redirect()->back()->withInput();
         }
 
         $fileGambar = $this->request->getFile('evidance');
 
-        if ($fileGambar->getError('evidance') !== 4) {
+        if ($fileGambar->getError('evidence') !== 4) {
             $namaFile = $fileGambar->getRandomName();
 
             $fileGambar->move('img', $namaFile);
@@ -269,7 +269,7 @@ class LogBookController extends BaseController
             'resolution' => $this->request->getVar('resolution'),
             'logbook_id' => $this->request->getVar('id'),
             'created_at' => Time::now(),
-            'evidance' => $namaFile,
+            'evidence' => $namaFile,
             'user_id' => session('id')
         ]);
 

@@ -89,12 +89,12 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="evidance" class="form-label">Evidance</label>
+                                    <label for="evidence" class="form-label">Evidance</label>
                                     <input type="file"
-                                           class="form-control <?= ($validation->hasError('evidance')) ? 'is-invalid' : '' ?>"
-                                           id="evidance" name="evidance">
+                                           class="form-control <?= ($validation->hasError('evidence')) ? 'is-invalid' : '' ?>"
+                                           id="evidence" name="evidence">
                                     <div class="invalid-feedback">
-                                        <?= ($validation->hasError('evidance')) ? $validation->getError('evidance') : '' ?>
+                                        <?= ($validation->hasError('evidence')) ? $validation->getError('evidence') : '' ?>
                                     </div>
                                     <input type="hidden" name="id" value="<?= $log->id ?>">
                                 </div>
