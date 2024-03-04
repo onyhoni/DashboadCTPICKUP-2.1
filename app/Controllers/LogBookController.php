@@ -216,7 +216,7 @@ class LogBookController extends BaseController
 
         ];
 
-        return view('logBook/show.php', $data);
+        return view('LogBook/show.php', $data);
 
     }
 
